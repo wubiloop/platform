@@ -1,6 +1,7 @@
 <?php
-require_once dirname(__FILE__) . '/../lib/rg/server/AbstractServer.php';
-
-$server = new AbstractServer();
+require_once dirname(__FILE__) . '/Server.php';
+//Create the server
+$server = new Server();
+//Run the server :-)
 $server->run();
 ?>
