@@ -1,0 +1,13 @@
+Options -Indexes
+Options -MultiViews
+
+<IfModule mod_headers.c>
+	Header set Access-Control-Allow-Origin "wubiloop.com"
+	Header set Connection keep-alive
+	Header unset X-Powered-By
+</IfModule>
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule ^from.html$ to.html
+	RewriteRule (.*)$ index.php [QSA,NC,L]
+</IfModule>
